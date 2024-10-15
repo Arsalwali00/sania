@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8085:80"  # Map port 8080 on your machine to port 80 in the container
+    volumes:
+      - ./:/usr/share/nginx/html  # Bind the host directory to the Nginx directory in the container
